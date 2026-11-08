@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: quto-lms-demo
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: QUTO_MODEL
+        value: openai/gpt-oss-120b
+      - key: QUTO_DISABLE_PASSWORD_RESET
+        value: "true"
