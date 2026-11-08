@@ -1,0 +1,11 @@
+Primary key adalah atribut yang mengidentifikasi setiap baris dalam tabel secara unik. Nilai primary key tidak boleh kosong dan tidak boleh sama dengan baris lain. Sebuah tabel hanya memiliki satu primary key, tetapi primary key tersebut dapat terdiri dari beberapa kolom yang disebut composite key.
+
+Normalisasi bertujuan mengurangi redundansi data dalam rancangan basis data. Bentuk normal pertama mensyaratkan setiap kolom hanya berisi nilai atomik. Bentuk normal kedua menghilangkan ketergantungan parsial terhadap primary key, sedangkan bentuk normal ketiga menghilangkan ketergantungan transitif antar atribut non-kunci.
+
+SQL merupakan bahasa standar untuk mengelola dan mengakses basis data relasional. Perintah SELECT dipakai untuk membaca data, INSERT untuk menambah data, UPDATE untuk mengubah data, dan DELETE untuk menghapus data. Klausa WHERE membatasi baris yang terpengaruh oleh perintah tersebut.
+
+Foreign key menghubungkan satu tabel dengan tabel lain melalui nilai referensi. Constraint ini menjaga integritas referensial, artinya nilai foreign key harus cocok dengan primary key di tabel yang dirujuk atau bernilai kosong. Jika baris induk dihapus, basis data dapat menolak penghapusan atau ikut menghapus baris anak melalui aturan CASCADE.
+
+Transaksi basis data harus memenuhi properti atomicity, consistency, isolation, dan durability. Atomicity berarti seluruh operasi dalam transaksi berhasil atau seluruhnya dibatalkan. Isolation memastikan transaksi yang berjalan bersamaan tidak saling mengganggu hasil satu sama lain.
+
+Indeks mempercepat pencarian data pada tabel yang berukuran besar. Tanpa indeks, basis data harus memindai seluruh baris tabel. Namun indeks memperlambat operasi penulisan karena struktur indeks juga harus diperbarui setiap kali data berubah.
